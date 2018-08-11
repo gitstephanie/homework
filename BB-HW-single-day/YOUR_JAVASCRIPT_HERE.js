@@ -1,6 +1,6 @@
 // Write your JS here
 var hero = {
-    name : "I",
+    name : "Rein", //:p
     heroic: true,
     inventory : [],
     health : 10,
@@ -41,3 +41,19 @@ function equipWeapon(hero){
 function fromBag(){
     hero.weapon = hero.inventory[0];
 }
+function displayStats(){
+    document.write(
+    `Hero stats <br/>
+    name: ${hero.name} </br>
+    health: ${hero.health} </br>
+    weapon type: ${hero.weapon.type} <br/>
+    weapon damage: ${hero.weapon.damage} 
+    `)
+}
+
+/*function chooseName(){
+    hero.name= getElementById("namehero").submit();
+    displayStats();
+}*/
+
+displayStats();
