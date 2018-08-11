@@ -23,7 +23,7 @@ function pickUpItem(hero, weapon){
     hero.inventory.push(weapon);
 };
 
-function addDagger(weapon){
+function addDagger(){
     hero.weapon.type = 'dagger';
     hero.weapon.damage = 2;
     hero.inventory.push(hero.weapon);
