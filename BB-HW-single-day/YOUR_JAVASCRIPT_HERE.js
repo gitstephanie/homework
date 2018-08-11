@@ -10,7 +10,7 @@ var hero = {
     }
 };
 
-function rest (hero){
+function rest(hero){
     hero.health = 10;
     return hero;
 };
@@ -38,25 +38,24 @@ function equipWeapon(hero){
     }
 };
 
-function fromBag(){
+function weaponFromBag(){
     hero.weapon = hero.inventory[0];
 }
+
 function displayStats(){
-    document.write(
-    `Hero stats <br/>
-    name: ${hero.name} </br>
-    health: ${hero.health} </br>
-    weapon type: ${hero.weapon.type} <br/>
+    window.alert(
+    `Hero stats
+    name: ${hero.name}
+    health: ${hero.health}
+    weapon type: ${hero.weapon.type}
     weapon damage: ${hero.weapon.damage} 
     `)
 }
 
-/*function chooseName(){
-    hero.name= getElementById("namehero").submit();
+function chooseName(){
+    hero.name = document.getElementById("customheroname").value;
     displayStats();
-}*/
-
-
+}
 
 displayStats();
 
