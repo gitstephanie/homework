@@ -9,19 +9,32 @@
 <body>
 
   <!-- YOUR HTML HERE -->
-<div class="container">
+<div class="images">
 <img onclick="resetHealth()" src="./images/health.png" id="inn" alt="img">
 <img onclick="addDagger()" src="./images/dagger.png" id="dagger" alt="img2">
 <img onclick="weaponFromBag()" src="./images/bag.png" id="bag" alt="img3">
 </div>
 
 <div class="uinput">
-<form id="namehero">
-  Choose the name of your hero:<br>
-  <input type="text" id="customheroname">
-  <br>
-  <input type="button" onclick="chooseName()" value="Submit">
-</form>
+  <form id="namehero">
+    Choose the name of your hero:<br>
+    <input type="text" id="customheroname">
+    <br>
+    <input type="button" onclick="chooseName()" value="Submit">
+  </form>
+</div>
+
+<div class="hero">
+  <h1>Status hero</h1>
+  <p id="herostat"></p>
+</div>
+<div class="enemy">
+  <h1>Status enemy</h1>
+  <p id="enemystat">"Hello"</p>
+</div>
+
+<div class="fight">
+<button id="myBtn" onclick="fightEnemy()">Fight enemy</button>
 </div>
 
   <!-- I RECOMMEND YOU LEAVE THE REST UNTOUCHED -->

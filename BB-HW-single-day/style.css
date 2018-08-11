@@ -1,5 +1,25 @@
 img {
     height: 100px;
     width: 100px;
+    margin: 50px;
     cursor: pointer;
 };
+
+body {
+    background-color: aqua;
+}
+
+h1 {
+    font-size: 18px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#herostat {
+    background-color: rgb(53, 189, 53);
+    align: left;
+}
+
+#enemystat {
+    background-color: rgb(218, 81, 81);
+    align: right;
+}

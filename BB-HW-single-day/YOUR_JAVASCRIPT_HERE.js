@@ -10,6 +10,17 @@ var hero = {
     }
 };
 
+var enemy = {
+    name: "Bad Guy",
+    heroic: true,
+    inventory: [],
+    health: 10,
+    weapon : {
+        type : 'knife',
+        damage: 2,
+    }
+};
+
 function rest(hero){
     hero.health = 10;
     return hero;
@@ -46,19 +57,44 @@ function weaponFromBag(){
 }
 
 function displayStats(){
-    window.alert(
-    `Hero stats
-    name: ${hero.name}
-    health: ${hero.health}
-    weapon type: ${hero.weapon.type}
+    document.getElementById("herostat").innerHTML = `
+    name: ${hero.name} <br>
+    health: ${hero.health} <br>
+    weapon type: ${hero.weapon.type} <br>
     weapon damage: ${hero.weapon.damage} 
-    `)
+    `;
 }
+
+function displayStatsEnemy(){
+    document.getElementById("enemystat").innerHTML = `
+    name: ${enemy.name} <br>
+    health: ${enemy.health} <br>
+    weapon type: ${enemy.weapon.type} <br>
+    weapon damage: ${enemy.weapon.damage} 
+    `;
+}
+
+displayStatsEnemy();
 
 function chooseName(){
     hero.name = document.getElementById("customheroname").value;
     displayStats();
 }
 
-displayStats();
+function fightEnemy(){
+    var random = Math.round(Math.random());
+    console.log(random);
+    if (random === 0){
+        window.alert("You won!")
+        enemy.health -= hero.weapon.damage
+        console.log(enemy.health)
+        displayStatsEnemy();
+    } else {
+        window.alert("You lost :(")
+        hero.health -= enemy.weapon.damage
+        console.log(hero.health)
+        displayStats();
+    }
+};
 
+displayStats();
