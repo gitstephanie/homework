@@ -16,10 +16,12 @@ h1 {
 
 #herostat {
     background-color: rgb(53, 189, 53);
-    align: left;
 }
 
 #enemystat {
     background-color: rgb(218, 81, 81);
-    align: right;
+}
+
+.enemy {
+    cursor: pointer;
 }

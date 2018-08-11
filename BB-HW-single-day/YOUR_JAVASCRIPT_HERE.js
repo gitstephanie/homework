@@ -85,15 +85,28 @@ function fightEnemy(){
     var random = Math.round(Math.random());
     console.log(random);
     if (random === 0){
-        window.alert("You won!")
         enemy.health -= hero.weapon.damage
         console.log(enemy.health)
         displayStatsEnemy();
+        window.alert("You won!")
     } else {
-        window.alert("You lost :(")
         hero.health -= enemy.weapon.damage
         console.log(hero.health)
         displayStats();
+        window.alert("You lost :(")
+    }
+    gameOver();
+};
+
+function gameOver(){
+    if (hero.health <= 0){
+        document.getElementById("myBtn").disabled = true;
+        window.alert("Game over. Reload to try again.");
+    } else if (enemy.health <= 0){
+        document.getElementById("myBtn").disabled = true;
+        window.alert("You defeated the enemy! Reload to play again.")
+    } else {
+        return false;
     }
 };
 
