@@ -24,14 +24,18 @@ function pickUpItem(hero, weapon){
 };
 
 function addDagger(){
-    hero.inventory.push(hero.weapon = {type: dagger, damage: 2})
+    hero.inventory.push(hero.weapon , {type: dagger, damage: 2})
 };
 
 function equipWeapon(hero){
-    if (hero.inventory === null){
-
+    if (hero.inventory.length === 0){ 
+        return false
     } else {
-    hero.weapon = hero.inventory[0];
+        hero.weapon = hero.inventory[0];
+        return true
     }
 };
 
+function fromBag(){
+    hero.weapon = hero.inventory[0];
+}
