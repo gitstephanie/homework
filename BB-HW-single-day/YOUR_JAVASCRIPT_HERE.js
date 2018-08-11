@@ -17,6 +17,7 @@ function rest(hero){
 
 function resetHealth(){
     hero.health = 10;
+    displayStats();
 };
 
 function pickUpItem(hero, weapon){
@@ -27,6 +28,7 @@ function addDagger(){
     hero.weapon.type = 'dagger';
     hero.weapon.damage = 2;
     hero.inventory.push(hero.weapon);
+    displayStats();
 };
 
 function equipWeapon(hero){
@@ -40,6 +42,7 @@ function equipWeapon(hero){
 
 function weaponFromBag(){
     hero.weapon = hero.inventory[0];
+    displayStats();
 }
 
 function displayStats(){
